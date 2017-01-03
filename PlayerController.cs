@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 
 		controller.velocity = moveDirection * speed;
 		
-		/// if you  use character controller
+		/// if you  make 3d game use CharacterController instead of Rigidbody2D
 	
 		/// CharacterController controller = GetComponent<CharacterController>();
 		/// controller.Move(moveDirection * );
