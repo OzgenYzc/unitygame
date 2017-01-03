@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed=5f;
 	public float jumpSpeed=15f;
-	public float gravity=10f;
+	
 	// Use this for initialization
 
 	private Vector2 moveDirection = Vector2.zero;
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
 		moveDirection = transform.TransformDirection (moveDirection);
 		moveDirection *= speed;
 
+		
 		transform.position= new Vector2(Mathf.Clamp (transform.position.x, -9.00f, 9.00f),transform.position.y);
 
 
@@ -38,6 +39,11 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		controller.velocity = moveDirection * speed;
+		
+		/// if you  use character controller
+	
+		/// CharacterController controller = GetComponent<CharacterController>();
+		/// controller.Move(moveDirection * );
 
 
 	}
